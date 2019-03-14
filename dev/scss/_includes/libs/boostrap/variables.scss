@@ -16,8 +16,8 @@
 // Body
 // Settings for the `<body>` element.
 
-$body-bg:       #ebebeb;
-$body-color:    #243746;
+$body-bg:       #ffffff;
+$body-color:    #000000;
  
 $white: #fff;
 $black: #000;
@@ -35,10 +35,12 @@ $link-hover-decoration: none;
 // Grid containers
 // Grid columns
 // Fonts
+
+$os: 'Open Sans', sans-serif;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$headings-font-family: "stem";
+$headings-font-family: $os;
 
 $font-size-base: 1.4rem; // Assumes the browser default, typically `14px`
 
@@ -119,7 +121,7 @@ $sw-xs-min:480px;//0//576
 // $sw-sm-min:768px;//576//768
 $sw-sm-min:768px;
 $sw-md-min:992px;//768
-$sw-lg-min:1200px;//1017
+$sw-lg-min:1400px;//1017
 
 $sw-xx-max:$sw-xs-min - 1px;//479px
 $sw-xs-max:$sw-sm-min - 1px;
@@ -160,7 +162,7 @@ $container-max-widths: (
  // sm: 630px + $grid-gutter-width-base,//540 //last-768
  sm: 620px + $grid-gutter-width-device,//540 //last-768
  md: 960px + $grid-gutter-width-base,//748
- lg: 960px + $grid-gutter-width-base,//1000
+ lg: 1350px + $grid-gutter-width-base,//1000
  //xl: 960px//1200
 );
 // @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -169,10 +171,10 @@ $container-max-widths: (
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: 'stem', sans-serif;
-$font-family-serif:      'stem', serif;
-$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-$font-family-base:       $font-family-sans-serif;
+$font-family-sans-serif: $os;
+$font-family-serif:      $os;
+$font-family-monospace:  $os;
+$font-family-base:       $os;
 
 // -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 // font-family: 'Roboto', sans-serif;

@@ -7,9 +7,20 @@
 
 /* plugins */
 
+//=include ../../dist/bower_components/popper.js/dist/umd/popper.min.js
+//=include ../../dist/bower_components/bootstrap/js/dist/modal.js
+//=include ../../dist/bower_components/popper.js/dist/umd/popper.min.js
+//=include ../../dist/bower_components/bootstrap/js/dist/dropdown.js
+//=include ../../dist/bower_components/bootstrap/js/dist/collapse.js
+//=include ../../dist/bower_components/bootstrap-select/dist/js/bootstrap-select.js
+//=include ../../dist/bower_components/bootstrap/js/dist/tooltip.js
+//=include ../../dist/bower_components/jquery-validation/dist/jquery.validate.min.js
+
 /* separate */
 //=include helpers/object-fit.js
+//=include helpers/toggle-blocks.js
 //=include separate/global.js
+//=include helpers/valid.js
 
 /* components */
 // components/js-header.js
@@ -46,3 +57,18 @@ Moff.amd.register({
 	loadOnScreen: ['xs', 'sm', 'md', 'lg'],
 	onWindowLoad: true
 });
+
+if ($('.selectpicker').length) {
+	Moff.amd.register({
+		id: 'select',
+		file: {
+			js: ['s/js/components/js-select.js']
+		},
+		
+		beforeInclude: function() {},
+		afterInclude: function() {},
+		
+		loadOnScreen: ['xs', 'sm', 'md', 'lg'],
+		onWindowLoad: true
+	});
+};

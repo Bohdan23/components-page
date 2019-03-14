@@ -1,0 +1,68 @@
+*::selection {
+    background: #b9d2ffad;
+    color: #000000;
+}
+
+.component {
+    &-block {
+        margin-top: 50px;
+        padding: 20px 0;
+        border-bottom: 1px solid #cccccc;
+    }
+    &-title {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 2rem;
+        color: #000000;
+        margin-bottom: 30px;
+    }
+    &-inner {
+        font-size: 1.6rem;
+    }
+    &-result {
+        border: 1px solid #e6e6e6;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    &-install {
+        background-color: #f7f5f5;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 40px;
+        .install-title {
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .install-list {
+            font-weight: 400;
+            font-style: italic;
+            & > li + li {
+                margin-top: 10px;    
+            }
+        }
+        .install-sublist {
+            list-style: none;
+            & > li {
+                font-size: 1.4rem;
+                margin-top: 6px;
+            }
+            li {
+                color: #503396;
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 15px;
+                    height: 3px;
+                    background-color: #d0cfd2;
+                    left: -25px;
+                    top: 8px;
+                }
+            }
+        }
+    }
+}
