@@ -58,17 +58,17 @@ Moff.amd.register({
 	onWindowLoad: true
 });
 
-if ($('.selectpicker').length) {
-	Moff.amd.register({
-		id: 'select',
-		file: {
-			js: ['s/js/components/js-select.js']
-		},
+// if ($('.selectpicker').length) {
+// 	Moff.amd.register({
+// 		id: 'select',
+// 		file: {
+// 			js: ['s/js/components/js-select.js']
+// 		},
 		
-		beforeInclude: function() {},
-		afterInclude: function() {},
+// 		beforeInclude: function() {},
+// 		afterInclude: function() {},
 		
-		loadOnScreen: ['xs', 'sm', 'md', 'lg'],
-		onWindowLoad: true
-	});
-};
+// 		loadOnScreen: ['xs', 'sm', 'md', 'lg'],
+// 		onWindowLoad: true
+// 	});
+// };

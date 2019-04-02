@@ -21,3 +21,25 @@ mixin c-component-block(data)
 					option(value="1") Mustard
 					option(value="1") Ketchup
 					option(value="1") Barbecue
+	.component-block
+		p.component-title Burger menu
+		.component-inner
+			.component-install
+				p.install-title What to do:
+				ol.install-list
+					//- li 
+					//- li <code> class="burger-menu"</code>
+					//- li <code><input type="checkbox" id="burger-checkbox"></code>
+					//- li <code><label for="burger-checkbox" class="burger-label"></code>
+					//- li <code><span></span></code>
+					//- li <code><span></span></code>
+					//- li <code><span></span></code>
+					//- li <code></label></code>
+					//- li <code></div></code>
+			.component-result
+				.burger-menu
+					input#burger-checkbox(type="checkbox")
+					label.burger-label(for="burger-checkbox")
+						span
+						span
+						span
