@@ -4,38 +4,23 @@
 	overflow: hidden;
 }
 
-// bootstrap select
 .bootstrap-select {
 	position: relative;
-	width: 180px !important;
-	height: 30px;
-	&.btn {
-		@media (max-width: $sw-sm-max) {
-			height: 28px;
-			line-height: 28px;
-			padding: 0 12px;
+    width: 200px;
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid rgba(0,0,0,.5);
+	border-radius: 5px;
+	&.show{
+		.dropdown-toggle{
+			&:after{
+				transform: translate(0, -50%) rotate(-180deg);
+			}
+		}
+		.btn-light{
+			background-color: transparent;
 		}
 	}
-	.dropdown-menu {
-		padding: 0;
-	}
-
-	button[type=button] {
-		border: none;
-	}
-	.btn-light:not(:disabled):not(.disabled):active {
-		border-color: transparent;
-		background-color: transparent;
-	}
-	.btn-light:not(:disabled):not(.disabled):active:focus {
-		box-shadow: none;
-	}
-	.btn-light:focus {
-		border-color: transparent;
-		background-color: transparent;
-		box-shadow: none;
-	}
-
 	& > select {
 		width: 0 !important;
 		visibility: hidden;
@@ -43,78 +28,41 @@
 		height: 0;
 		position: absolute;
 	}
-	&.btn-group {
-		.dropdown-toggle {
-			.filter-option {
-				text-overflow: ellipsis;
-				white-space: nowrap;
-				overflow: hidden;
-				display: block;
-				float: none;
-			}
-		}
-	}
-	
-	.dropdown-menu {
-		min-width: auto;
-	}
-
 	.dropdown-toggle {
-		background-color: transparent;
-		position: relative;
-		z-index: 2;
-		overflow: hidden;
-		cursor: pointer;
-		padding: 0 11px;
-		height: 100%;
 		width: 100%;
-		min-width: auto;
-		&.btn {
-			@media (max-width: $sw-sm-max) {
-				height: 28px;
-				line-height: 28px;
-				padding: 0 12px;
-			}
-		}
-		.bs-caret {
-			display: none;
-		}
-		&:hover {
-			background-color: $white;
+		padding: 0 20px;
+		border-radius: inherit;
+		height: 100%;
+		vertical-align: top;
+		&::after {
+			content: '';
+			width: 10px;
+			height: 6px;
+			display: block;
+			top: 50%;
+			transform: translate(0, -50%) rotate(0deg);
+			right: 14px;
+			position: absolute;
+			border: none !important;
+			background-image: url(../../s/images/useful/chevron.png);
+			background-repeat: no-repeat;
+			transition: transform 0.3s ease;
 		}
 	}
-
 	& > .dropdown-menu {
-		background-color: $white;
-		margin-top: 2px;
+		box-shadow: 0 1px 8px rgba(0, 0, 0, 0.16);
+		background-color: white;
+		margin-top: 5px;
 		width: 100%;
 		border: none;
 		padding: 0;
-		transform: translate3d(0, 3.1rem, 0px)!important;
+		transform: translate3d(0, 4.5rem, 0px)!important;
+
 		.inner {
-			border-radius: 0;
+			border: 1px solid rgba(0,0,0,.5);
 			position: relative;
 			width: 100%;
 			margin: 0;
-			li {
-				&:not(:last-child) {
-					a {
-						position: relative;
-						&:after {
-							display: block;
-							content: " ";
-							position: absolute;
-							bottom: 0;
-							right: 0;
-							left: 0;
-							margin: 0 auto;
-							height: 1px;
-							width: 90%;
-							background-color: rgba(0, 0, 0, 0.04);
-						}
-					}
-				}
-			}
 		}
 		& > .inner {
 			display: block;
@@ -146,79 +94,42 @@
 			}
 		}
 	}
-	span {
-		font-weight: 400;
-		line-height: normal;
-		font-size: 13px;
-		color: #000000;
-	}
 	.filter-option-inner-inner {
 		display: flex;
 		align-items: center;
-		font-family: 'PT Sans', sans-serif;
-		font-size: 1.4rem;
-        font-weight: 400;
-        line-height: 20px;
-		color: $black;
+		font-weight: 400;
+		line-height: 1;
+		font-size: 15px;
+		color: #000;
 		margin-right: 10px;
 		transition: color 0.3s ease;
 	}
 	.dropdown-item.active, .dropdown-item:active {
 		background-color: #f5f6f7;
 		.text {
-			color: $black;
+			color: #000;
 		}
 	}
 	.dropdown-item {
 		cursor: pointer;
-		padding: 9px 11px;
+		padding: 9px 20px;
 		text-decoration: none;
 		transition: background-color 0.3s ease;
 		&:focus {
 			outline: none;
 		}
 		.text{
-			color: $black;
-			font-size: 1.4rem;
-			font-weight: 400;
+			color: #000;
+			font-size: 1.5rem;
 		}
 		&:hover {
 			background-color: #f5f6f7;
 			.text {
-				color: rgba(0,0,0,.8);
+				color: #000;
 			}
 		}
 		&:not(:last-child) {
 			border: 1px solid black;
 		}
-	}
-	&.show{
-		.dropdown-toggle{
-			&:after{
-				transform: translate(0, -50%) rotate(-180deg);
-			}
-		}
-		.btn-light{
-			background-color: transparent;
-		}
-	}
-}
-
-.bootstrap-select .dropdown-toggle, .dropdown-toggle {
-	&::after {
-		content: '';
-		display: block;
-		width: 10px;
-		height: 8px;
-		position: absolute;
-		top: 50%;
-		right: 9px;
-		transform: translateY(-50%);
-		// background-image: url('../../s/images/useful/svg/chevron.svg');
-		background-repeat: no-repeat;
-		background-size: contain;
-		margin-left: 0;
-		border: none;
-		transition: transform 0.3s ease;
 	}
 }

@@ -66,48 +66,7 @@
 .input-wrap {
 	& > .ico {}
 }
-.bootstrap-select {
-	&:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-		width: 100%;
-	}
-	&.btn-group.open .dropdown-toggle {
-		.caret{
-		}
-		.bs-caret {
-		}
-	}
-	& > .dropdown-toggle {
-		&:hover {
-			.bs-caret {}
-		}
-		&:focus {
-		}
-		&:active {}
 
-		&.dropdown-toggle,
-		&.bs-placeholder {
-			&,
-			&:hover,
-			&:focus,
-			&:active {
-				outline: none!important;
-			}
-		}
-
-		span {}
-	}
-	.dropdown-menu {
-		&.open {}
-		ul.dropdown-menu {
-			& > li {
-				&.selected.active {
-					& > a {}
-				}
-				& > a {}
-			}
-		}
-	}
-}
 label {
 	margin-bottom: 0;
 	font-weight: 400;

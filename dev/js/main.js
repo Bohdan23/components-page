@@ -7,9 +7,9 @@
 
 /* plugins */
 
+//=include ../../dist/bower_components/bootstrap/js/dist/util.js
 //=include ../../dist/bower_components/popper.js/dist/umd/popper.min.js
 //=include ../../dist/bower_components/bootstrap/js/dist/modal.js
-//=include ../../dist/bower_components/popper.js/dist/umd/popper.min.js
 //=include ../../dist/bower_components/bootstrap/js/dist/dropdown.js
 //=include ../../dist/bower_components/bootstrap/js/dist/collapse.js
 //=include ../../dist/bower_components/bootstrap-select/dist/js/bootstrap-select.js

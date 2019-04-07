@@ -8,16 +8,18 @@ mixin c-component-block(data)
 					li bower install bootstrap-select --save
 					li connect in main.js /* plugins */
 						ul.install-sublist
+							lli //=include ../../dist/bower_components/bootstrap/js/dist/util.js
 							li //=include ../../dist/bower_components/popper.js/dist/umd/popper.min.js
 							li //=include ../../dist/bower_components/bootstrap/js/dist/dropdown.js
-							li //=include ../../dist/bower_components/bootstrap/js/dist/collapse.js
 							li //=include ../../dist/bower_components/bootstrap-select/dist/js/bootstrap-select.js
 					li uncomment in scss/_includes/libs/bootstrap/bootstrap.scss:
 						ul.install-sublist
-							li @import "../../../../../dist/bower_components/bootstrap/scss/transitions";
 							li @import "../../../../../dist/bower_components/bootstrap/scss/dropdown";
+					li jade: select(name="select").selectpicker
+					li 
+						a(href="https://codepen.io/combs93/pen/QPKpBQ", target="_blank") styles
 			.component-result
-				select.selectpicker
+				select(name="select").selectpicker
 					option(value="1") Mustard
 					option(value="1") Ketchup
 					option(value="1") Barbecue
