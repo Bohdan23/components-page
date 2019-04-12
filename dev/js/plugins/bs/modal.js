@@ -174,7 +174,7 @@
 
         this._adjustDialog();
 
-        $$$1(document.body).addClass(ClassName.OPEN);
+        // $$$1(document.body).addClass(ClassName.OPEN);
 
         this._setEscapeEvent();
 
@@ -360,7 +360,7 @@
         this._isTransitioning = false;
 
         this._showBackdrop(function () {
-          $$$1(document.body).removeClass(ClassName.OPEN);
+          // $$$1(document.body).removeClass(ClassName.OPEN);
 
           _this7._resetAdjustments();
 
@@ -498,7 +498,7 @@
 
           var actualPadding = document.body.style.paddingRight;
           var calculatedPadding = $$$1(document.body).css('padding-right');
-          $$$1(document.body).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + this._scrollbarWidth + "px");
+          // $$$1(document.body).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + this._scrollbarWidth + "px");
         }
       };
 
@@ -521,7 +521,7 @@
         }); // Restore body padding
 
         var padding = $$$1(document.body).data('padding-right');
-        $$$1(document.body).removeData('padding-right');
+        // $$$1(document.body).removeData('padding-right');
         document.body.style.paddingRight = padding ? padding : '';
       };
 

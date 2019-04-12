@@ -48,7 +48,11 @@ Moff.amd.register({
 	// 	css: ['http://chat-domain.com/css/chat.css']
 	// },
 	file: {
-		js: ['s/js/components/js-header.js']
+		js: [
+				's/js/components/js-header.js',
+				's/js/components/js-simple-timer.js',
+				's/js/components/js-timer.js'
+			]
 	},
 
 	beforeInclude: function() {},
@@ -58,17 +62,25 @@ Moff.amd.register({
 	onWindowLoad: true
 });
 
-// if ($('.selectpicker').length) {
-// 	Moff.amd.register({
-// 		id: 'select',
-// 		file: {
-// 			js: ['s/js/components/js-select.js']
-// 		},
-		
-// 		beforeInclude: function() {},
-// 		afterInclude: function() {},
-		
-// 		loadOnScreen: ['xs', 'sm', 'md', 'lg'],
-// 		onWindowLoad: true
-// 	});
-// };
+if($(".js-modal").length){
+    Moff.amd.register({
+        id: 'modal',
+        depend: {
+            js: ['s/js/plugins/bs/modal.js']
+        },
+        file: {
+            js: ['s/js/helpers/bs_modal_fix.js']
+        },
+
+        beforeInclude: function() {},
+        afterInclude: function() {},
+
+        loadOnScreen: ['xs', 'sm', 'md', 'lg'],
+        onWindowLoad: true
+    });
+}
+
+$('.component-title').on('click', function() {
+	$(this).toggleClass('active');
+	$(this).siblings('.component-inner').slideToggle(300);
+});

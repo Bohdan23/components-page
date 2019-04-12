@@ -7,7 +7,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	min-height: 100%;
-	letter-spacing: .015rem;
+	font-family: $os;
 }
 img{
 	max-width: 100%;

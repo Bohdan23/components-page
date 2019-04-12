@@ -8,6 +8,7 @@ include ../helpers/_mixins
 include ../components/head/head
 include ../components/header/header
 include ../components/footer/footer
+include ../components/c-modal/c-modal
 
 //-----------   INCLUDES END  --------------
 
@@ -22,5 +23,6 @@ html(lang='en')
 					h1.display-1 Hello :)
 					p Enjoy It To The Fullest
 					img(src="", alt="" width="1000" height="1000")
-			
+		block beforeScripts
+			+c-modal()
 		script(src=route.js + "main.js")

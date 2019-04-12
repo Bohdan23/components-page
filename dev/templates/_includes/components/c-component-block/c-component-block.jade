@@ -1,14 +1,15 @@
 mixin c-component-block(data)
+	//- bootstrap select
 	.component-block
-		p.component-title Bootsrap select
-		.component-inner
+		p.component-title Bootstrap select
+		.component-inner.hidden
 			.component-install
 				p.install-title What to do:
 				ol.install-list
 					li bower install bootstrap-select --save
 					li connect in main.js /* plugins */
 						ul.install-sublist
-							lli //=include ../../dist/bower_components/bootstrap/js/dist/util.js
+							li //=include ../../dist/bower_components/bootstrap/js/dist/util.js
 							li //=include ../../dist/bower_components/popper.js/dist/umd/popper.min.js
 							li //=include ../../dist/bower_components/bootstrap/js/dist/dropdown.js
 							li //=include ../../dist/bower_components/bootstrap-select/dist/js/bootstrap-select.js
@@ -23,25 +24,63 @@ mixin c-component-block(data)
 					option(value="1") Mustard
 					option(value="1") Ketchup
 					option(value="1") Barbecue
+	//- bootstrap modal
 	.component-block
-		p.component-title Burger menu
-		.component-inner
+		p.component-title Bootstrap modal
+		.component-inner.hidden
 			.component-install
 				p.install-title What to do:
 				ol.install-list
-					//- li 
-					//- li <code> class="burger-menu"</code>
-					//- li <code><input type="checkbox" id="burger-checkbox"></code>
-					//- li <code><label for="burger-checkbox" class="burger-label"></code>
-					//- li <code><span></span></code>
-					//- li <code><span></span></code>
-					//- li <code><span></span></code>
-					//- li <code></label></code>
-					//- li <code></div></code>
+					li uncomment in bootstrap.scss 
+						ul.install-sublist
+							li @import "../../../../../dist/bower_components/bootstrap/scss/transitions";
+					li connect in main.js /* plugins */ 
+						ul.install-sublist
+							li //=include ../../dist/bower_components/bootstrap/js/dist/util.js
+					li Connect by Moff Loader helpers/bs_modal_fix.js and plugins/bs/modal.js in MAIN.js
+						ul.install-sublist
+							li 
+								a(href="https://codepen.io/combs93/pen/oOwVog", target="_blank") script						
+					li plugins/bs/modal.js comment all (body.add(remove)Class(Open))
+						ul.install-sublist
+							li 177 line
+							li 363 line
+							li 501 line (padding-right)
+							li 524 line (padding-right)
+					li Create c-modal component
+					li Connect c-modal in _extenda/main.jade in block beforeScripts after .l-wrapper
+					li modal jade
+						ul.install-sublist
+							li 
+								a(href="https://codepen.io/combs93/pen/zXzVGJ") jade
+					li btn/link trigger
+						ul.install-sublist
+							li #[code a(href="#my_modal", data-toggle="modal")]
 			.component-result
-				.burger-menu
-					input#burger-checkbox(type="checkbox")
-					label.burger-label(for="burger-checkbox")
-						span
-						span
-						span
+				a(href="#my_modal", data-toggle="modal") modal trigger
+	//- Timer
+	.component-block
+		p.component-title Timer
+		.component-inner
+			.component-install
+				p.install-title Simple tick timer
+				ol.install-list
+					li Create #[code button.tick-init Tick] to init a tick timer
+					li #[a(href="https://codepen.io/combs93/pen/QPgeqo", target="_blank") js]
+			.component-result
+				span#timer_count 0
+				button.tick-init Tick Init
+			.component-install
+				p.install-title Timee pro
+				ol.install-list
+					li 
+						a(href="https://codepen.io/combs93/pen/QPgeqo", target="_blank") Jade and js 
+			.component-result
+				#contest_timer.contest-timer
+					span.timer-days
+					span.contest-timer-dots :
+					span.timer-hours
+					span.contest-timer-dots :
+					span.timer-minutes
+					span.contest-timer-dots :
+					span.timer-seconds
