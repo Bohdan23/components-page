@@ -56,12 +56,13 @@ mixin c-component-block(data)
 					li btn/link trigger
 						ul.install-sublist
 							li #[code a(href="#my_modal", data-toggle="modal")]
+							li #[code button(type="button", data-target="#my_modal", data-toggle="modal")]
 			.component-result
 				a.resutlt-btn(href="#my_modal", data-toggle="modal") modal trigger
 	//- Timer
 	.component-block
 		p.component-title Timer
-		.component-inner
+		.component-inner.hidden
 			.component-install
 				p.install-title Simple tick timer
 				ol.install-list
@@ -84,3 +85,14 @@ mixin c-component-block(data)
 					span.timer-minutes
 					span.contest-timer-dots :
 					span.timer-seconds
+	.component-block
+		p.component-title Timer
+		.component-inner
+			.component-install
+				p.install-title Simple tick timer
+				ol.install-list
+					li Create #[code button.tick-init Tick] to init a tick timer
+					li #[a(href="https://codepen.io/combs93/pen/QPgeqo", target="_blank") js]
+			.component-result
+				span#timer_count 0
+				button.resutlt-btn.tick-init Tick Init
